@@ -18,7 +18,7 @@ const createUser = async (req, res) => {
 
         const [result] = await db.query("INSERT INTO usuario (name, email, password, ativo, typeUser) VALUES (?, ?, ?, ?, ?)", [name, email, hashPassword, 1, typeUser]);
 
-        if(result.affectedRows === o)
+        if(result.affectedRows === 0)
             return res.status(400).json({message: "Não foi possível inserir o usuário!"});
          
         return res.status(201).json({message: "Usuário cadastrado com sucesso!"})
@@ -28,7 +28,10 @@ const createUser = async (req, res) => {
     }
 }
 
+const editUser = async (req, res) => {
+    
+}
+
 module.exports = {
-    createUser,
-    db
+    createUser
 }

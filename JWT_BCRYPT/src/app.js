@@ -1,7 +1,6 @@
 const express = require('express'); // import express from 'express'; - Duas formas diferentes de importação
 const cors = require('cors');
 const app = express();
-const bcrypt = require('bcrypt');
 const routerUser = require('./routes/usuario.js');
 
 app.use(cors());

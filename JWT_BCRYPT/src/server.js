@@ -1,7 +1,7 @@
 const app = require('./app.js');
 const PORT = 8000;
 
-app.listen(() => {
+app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`)
     
 });
